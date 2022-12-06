@@ -27,6 +27,7 @@
 #include <stdio.h>
 #include "mouse_main.h"
 #include "b_l475e_iot01a1_bus.h"
+#include "tflite_interface.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

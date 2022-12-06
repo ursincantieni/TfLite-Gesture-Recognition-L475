@@ -3,8 +3,6 @@
 //
 
 #include "mouse_main.h"
-#include "main.h"
-#include "lsm6dsl.h"
 
 void mouse_move(LSM6DSL_Axes_t* axes, struct mouseHID_t* mouseHID) {
 
