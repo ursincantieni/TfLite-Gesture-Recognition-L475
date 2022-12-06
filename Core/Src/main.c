@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "mouse_main.h"
+#include "b_l475e_iot01a1_bus.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,6 +36,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,10 +49,17 @@
 
 /* USER CODE BEGIN PV */
 
+struct mouseHID_t myMouse = {0,0,0, 0};
+LSM6DSL_Object_t MotionSensor;
+
+uint32_t Button_Flag;
+volatile uint32_t dataRdyIntReceived;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MEMS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -90,7 +100,9 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-
+    Button_Flag = RESET;
+    dataRdyIntReceived = 0;
+    MEMS_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,6 +111,14 @@ int main(void)
   //mouse_main();
   while (1)
   {
+      if (dataRdyIntReceived != 0) {
+          dataRdyIntReceived = 0;
+          LSM6DSL_Axes_t acc_axes;
+          LSM6DSL_ACC_GetAxes(&MotionSensor, &acc_axes);
+          printf("% 5d, % 5d, % 5d\n", (int) acc_axes.x, (int) acc_axes.y, (int) acc_axes.z);
+
+          mouse_move(&acc_axes, &myMouse);
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -167,7 +187,49 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void MEMS_Init(void)
+{
+    LSM6DSL_IO_t io_ctx;
+    uint8_t id;
+    LSM6DSL_AxesRaw_t axes;
 
+    /* Link I2C functions to the LSM6DSL driver */
+    io_ctx.BusType     = LSM6DSL_I2C_BUS;
+    io_ctx.Address     = LSM6DSL_I2C_ADD_L;
+    io_ctx.Init        = BSP_I2C2_Init;
+    io_ctx.DeInit      = BSP_I2C2_DeInit;
+    io_ctx.ReadReg     = BSP_I2C2_ReadReg;
+    io_ctx.WriteReg    = BSP_I2C2_WriteReg;
+    io_ctx.GetTick     = BSP_GetTick;
+    LSM6DSL_RegisterBusIO(&MotionSensor, &io_ctx);
+
+    /* Read the LSM6DSL WHO_AM_I register */
+    LSM6DSL_ReadID(&MotionSensor, &id);
+    if (id != LSM6DSL_ID) {
+        Error_Handler();
+    }
+
+    /* Initialize the LSM6DSL sensor */
+    LSM6DSL_Init(&MotionSensor);
+
+    /* Configure the LSM6DSL accelerometer (ODR, scale and interrupt) */
+    LSM6DSL_ACC_SetOutputDataRate(&MotionSensor, 48.0f); /* 26 Hz */
+    LSM6DSL_ACC_SetFullScale(&MotionSensor, 4);          /* [-4000mg; +4000mg] */
+    LSM6DSL_ACC_Set_INT1_DRDY(&MotionSensor, ENABLE);    /* Enable DRDY */
+    LSM6DSL_ACC_GetAxesRaw(&MotionSensor, &axes);        /* Clear DRDY */
+
+    /* Start the LSM6DSL accelerometer */
+    LSM6DSL_ACC_Enable(&MotionSensor);
+}
+
+/* EXTI callback */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    if (GPIO_Pin == GPIO_PIN_11) {
+        dataRdyIntReceived = 1;
+    } else {
+        Button_Flag = SET;
+    }
+}
 /* USER CODE END 4 */
 
 /**

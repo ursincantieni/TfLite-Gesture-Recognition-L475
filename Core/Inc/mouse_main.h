@@ -7,8 +7,7 @@
 
 #include <stdint.h>
 #include "usbd_hid.h"
-
-extern USBD_HandleTypeDef hUsbDeviceFS;
+#include "lsm6dsl.h"
 
 struct mouseHID_t {
     int8_t button;
@@ -17,11 +16,12 @@ struct mouseHID_t {
     int8_t wheel;
 };
 
+extern LSM6DSL_Object_t MotionSensor;
+extern USBD_HandleTypeDef hUsbDeviceFS;
 
-//extern mouseHID_t myMouse;
-
-void mouse_zero(struct mouseHID_t* mouseHID);
+void mouse_move(LSM6DSL_Axes_t* axes, struct mouseHID_t* mouseHID);
 void mouse_send(struct mouseHID_t* mouseHID);
+void mouse_zero(struct mouseHID_t* mouseHID);
 void mouse_it(struct mouseHID_t* mouseHID);
 void mouse_main();
 
