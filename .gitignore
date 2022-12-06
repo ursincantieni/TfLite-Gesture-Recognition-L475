@@ -1,0 +1,11 @@
+.DS_Store
+.osx.project
+.cproject
+.mxproject
+.project
+
+#build folder
+cmake-build-debug/
+
+#clion stuff
+.idea/
