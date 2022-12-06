@@ -49,19 +49,21 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Core/Inc Drivers/STM32L4xx_HAL_Driver/Inc Drivers/STM32L4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32L4xx/Include Drivers/CMSIS/Include)
+include_directories(Core/Inc X-CUBE-MEMS1/Target USB_DEVICE/App USB_DEVICE/Target Drivers/BSP/B-L475E-IOT01A1 Drivers/STM32L4xx_HAL_Driver/Inc Drivers/STM32L4xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc Drivers/CMSIS/Device/ST/STM32L4xx/Include Drivers/CMSIS/Include Drivers/BSP/Components/lsm6dsl)
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -DTF_LITE_STATIC_MEMORY
-        -DTF_LITE_DISABLE_X86_NEON
+add_definitions(
+	-DDEBUG
+       	-DUSE_HAL_DRIVER
+       	-DSTM32L475xx
+	-DTF_LITE_DISABLE_X86_NEON
         -DCMSIS_NN
         -DTF_LITE_USE_CTIME
         -DUSE_HAL_DRIVER
         -DTF_LITE_MCU_DEBUG_LOG
         -DNDEBUG
+)
 
-        )
-
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "X-CUBE-MEMS1/*.*" "Drivers/*.*" "USB_DEVICE/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32L475VGTX_FLASH.ld)
 
