@@ -6,6 +6,7 @@
 
 #build folder
 cmake-build-debug/
+build/
 
 #clion stuff
 .idea/

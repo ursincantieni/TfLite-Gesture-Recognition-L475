@@ -201,29 +201,29 @@ Core/Src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
 
-Core/Src/model.obj: Core/Src/model.cpp.obj
-.PHONY : Core/Src/model.obj
+Core/Src/model_data.obj: Core/Src/model_data.cpp.obj
+.PHONY : Core/Src/model_data.obj
 
 # target to build an object file
-Core/Src/model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj
-.PHONY : Core/Src/model.cpp.obj
+Core/Src/model_data.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj
+.PHONY : Core/Src/model_data.cpp.obj
 
-Core/Src/model.i: Core/Src/model.cpp.i
-.PHONY : Core/Src/model.i
+Core/Src/model_data.i: Core/Src/model_data.cpp.i
+.PHONY : Core/Src/model_data.i
 
 # target to preprocess a source file
-Core/Src/model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.i
-.PHONY : Core/Src/model.cpp.i
+Core/Src/model_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.i
+.PHONY : Core/Src/model_data.cpp.i
 
-Core/Src/model.s: Core/Src/model.cpp.s
-.PHONY : Core/Src/model.s
+Core/Src/model_data.s: Core/Src/model_data.cpp.s
+.PHONY : Core/Src/model_data.s
 
 # target to generate assembly for a file
-Core/Src/model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.s
-.PHONY : Core/Src/model.cpp.s
+Core/Src/model_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.s
+.PHONY : Core/Src/model_data.cpp.s
 
 Core/Src/mouse_main.obj: Core/Src/mouse_main.c.obj
 .PHONY : Core/Src/mouse_main.obj
@@ -248,30 +248,6 @@ Core/Src/mouse_main.s: Core/Src/mouse_main.c.s
 Core/Src/mouse_main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.s
 .PHONY : Core/Src/mouse_main.c.s
-
-Core/Src/mouse_sensor.obj: Core/Src/mouse_sensor.c.obj
-.PHONY : Core/Src/mouse_sensor.obj
-
-# target to build an object file
-Core/Src/mouse_sensor.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj
-.PHONY : Core/Src/mouse_sensor.c.obj
-
-Core/Src/mouse_sensor.i: Core/Src/mouse_sensor.c.i
-.PHONY : Core/Src/mouse_sensor.i
-
-# target to preprocess a source file
-Core/Src/mouse_sensor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.i
-.PHONY : Core/Src/mouse_sensor.c.i
-
-Core/Src/mouse_sensor.s: Core/Src/mouse_sensor.c.s
-.PHONY : Core/Src/mouse_sensor.s
-
-# target to generate assembly for a file
-Core/Src/mouse_sensor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.s
-.PHONY : Core/Src/mouse_sensor.c.s
 
 Core/Src/project.obj: Core/Src/project.c.obj
 .PHONY : Core/Src/project.obj
@@ -416,6 +392,30 @@ Core/Src/system_stm32l4xx.s: Core/Src/system_stm32l4xx.c.s
 Core/Src/system_stm32l4xx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.s
 .PHONY : Core/Src/system_stm32l4xx.c.s
+
+Core/Src/tflite_interface.obj: Core/Src/tflite_interface.cpp.obj
+.PHONY : Core/Src/tflite_interface.obj
+
+# target to build an object file
+Core/Src/tflite_interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj
+.PHONY : Core/Src/tflite_interface.cpp.obj
+
+Core/Src/tflite_interface.i: Core/Src/tflite_interface.cpp.i
+.PHONY : Core/Src/tflite_interface.i
+
+# target to preprocess a source file
+Core/Src/tflite_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.i
+.PHONY : Core/Src/tflite_interface.cpp.i
+
+Core/Src/tflite_interface.s: Core/Src/tflite_interface.cpp.s
+.PHONY : Core/Src/tflite_interface.s
+
+# target to generate assembly for a file
+Core/Src/tflite_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l475tflite.elf.dir/build.make CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.s
+.PHONY : Core/Src/tflite_interface.cpp.s
 
 Core/Src/usart.obj: Core/Src/usart.c.obj
 .PHONY : Core/Src/usart.obj
@@ -5939,15 +5939,12 @@ help:
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"
-	@echo "... Core/Src/model.obj"
-	@echo "... Core/Src/model.i"
-	@echo "... Core/Src/model.s"
+	@echo "... Core/Src/model_data.obj"
+	@echo "... Core/Src/model_data.i"
+	@echo "... Core/Src/model_data.s"
 	@echo "... Core/Src/mouse_main.obj"
 	@echo "... Core/Src/mouse_main.i"
 	@echo "... Core/Src/mouse_main.s"
-	@echo "... Core/Src/mouse_sensor.obj"
-	@echo "... Core/Src/mouse_sensor.i"
-	@echo "... Core/Src/mouse_sensor.s"
 	@echo "... Core/Src/project.obj"
 	@echo "... Core/Src/project.i"
 	@echo "... Core/Src/project.s"
@@ -5966,6 +5963,9 @@ help:
 	@echo "... Core/Src/system_stm32l4xx.obj"
 	@echo "... Core/Src/system_stm32l4xx.i"
 	@echo "... Core/Src/system_stm32l4xx.s"
+	@echo "... Core/Src/tflite_interface.obj"
+	@echo "... Core/Src/tflite_interface.i"
+	@echo "... Core/Src/tflite_interface.s"
 	@echo "... Core/Src/usart.obj"
 	@echo "... Core/Src/usart.i"
 	@echo "... Core/Src/usart.s"

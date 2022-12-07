@@ -296,6 +296,8 @@ set(TENSORFLOW
         "tensorflow/lite/micro/kernels/unpack.cc"
         "tensorflow/lite/micro/kernels/var_handle.cc"
         "tensorflow/lite/micro/kernels/zeros_like.cc"
+
+        "tensorflow/lite/micro/examples/hello_world/hello_world_model_data.cc"
 )
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${TENSORFLOW})

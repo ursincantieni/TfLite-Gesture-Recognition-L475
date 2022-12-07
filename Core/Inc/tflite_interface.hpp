@@ -9,6 +9,7 @@
 extern "C" {
 #endif
 
+void initTflite();
 
 #ifdef __cplusplus
 }

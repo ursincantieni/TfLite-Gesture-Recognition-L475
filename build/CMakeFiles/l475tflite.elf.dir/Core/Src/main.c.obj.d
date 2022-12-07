@@ -72,4 +72,11 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.obj: \
  /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Drivers/BSP/Components/lsm6dsl/lsm6dsl.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Drivers/BSP/Components/lsm6dsl/lsm6dsl_reg.h \
+ /Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi/arm-none-eabi/include/math.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Inc/b_l475e_iot01a1_conf.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_errno.h \
+ /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Inc/tflite_interface.hpp

@@ -111,19 +111,19 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.s"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/main.c -o CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.s
 
-CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj: CMakeFiles/l475tflite.elf.dir/flags.make
-CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model.cpp
-CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj"
-	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model.cpp
+CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj: CMakeFiles/l475tflite.elf.dir/flags.make
+CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model_data.cpp
+CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model_data.cpp
 
-CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.i"
-	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model.cpp > CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.i
+CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.i"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model_data.cpp > CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.i
 
-CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.s"
-	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model.cpp -o CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.s
+CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.s"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/model_data.cpp -o CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.s
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_main.c
@@ -139,24 +139,10 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.s"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_main.c -o CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.s
 
-CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
-CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_sensor.c
-CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj"
-	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_sensor.c
-
-CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.i"
-	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_sensor.c > CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.i
-
-CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.s"
-	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/mouse_sensor.c -o CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.s
-
 CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/project.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/project.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.s: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/stm32l4xx_hal_msp.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/stm32l4xx_hal_msp.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.s: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/stm32l4xx_it.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/stm32l4xx_it.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.s: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/syscalls.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/syscalls.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -212,7 +198,7 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/sysmem.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/sysmem.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -226,7 +212,7 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/system_stm32l4xx.c
 CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/system_stm32l4xx.c
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.i: cmake_force
@@ -236,6 +222,20 @@ CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.i: cmake_force
 CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.s"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/system_stm32l4xx.c -o CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.s
+
+CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj: CMakeFiles/l475tflite.elf.dir/flags.make
+CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/tflite_interface.cpp
+CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj: CMakeFiles/l475tflite.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj -MF CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj.d -o CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj -c /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/tflite_interface.cpp
+
+CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.i"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/tflite_interface.cpp > CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.i
+
+CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.s"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/tflite_interface.cpp -o CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.s
 
 CMakeFiles/l475tflite.elf.dir/Core/Src/usart.c.obj: CMakeFiles/l475tflite.elf.dir/flags.make
 CMakeFiles/l475tflite.elf.dir/Core/Src/usart.c.obj: /Users/ursincantieni/GitHub/ursincantieni/TFLiteMouseL475/Core/Src/usart.c
@@ -3461,15 +3461,15 @@ l475tflite_elf_OBJECTS = \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/gpio.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/helpers.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.obj" \
-"CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj" \
+"CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.obj" \
-"CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj" \
+"CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Src/usart.c.obj" \
 "CMakeFiles/l475tflite.elf.dir/Core/Startup/startup_stm32l475vgtx.s.obj" \
 "CMakeFiles/l475tflite.elf.dir/Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.c.obj" \
@@ -3707,15 +3707,15 @@ l475tflite_elf_EXTERNAL_OBJECTS =
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/gpio.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/helpers.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/main.c.obj
-l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/model.cpp.obj
+l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/model_data.cpp.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_main.c.obj
-l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/mouse_sensor.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/project.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/stm32l4xx_it.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/syscalls.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/sysmem.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/system_stm32l4xx.c.obj
+l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/tflite_interface.cpp.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Src/usart.c.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Core/Startup/startup_stm32l475vgtx.s.obj
 l475tflite.elf: CMakeFiles/l475tflite.elf.dir/Drivers/BSP/B-L475E-IOT01A1/b_l475e_iot01a1_bus.c.obj

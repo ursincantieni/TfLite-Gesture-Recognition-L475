@@ -56,6 +56,8 @@ LSM6DSL_Object_t MotionSensor;
 uint32_t Button_Flag;
 volatile uint32_t dataRdyIntReceived;
 
+uint8_t Rx_data[10];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -108,8 +110,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  printf("\n\n\nFinished Initialization!\n");
+  int i = 0;
+  while (i < 20) {
+      HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+      HAL_Delay(100);
+      ++i;
+  }
+
+  printf("\n\r\n\rFinished Initialization!\n\r");
+  initTflite();
+  while (1) {}
   //mouse_main();
+
   while (1)
   {
       if (dataRdyIntReceived != 0) {
@@ -230,6 +242,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
     } else {
         Button_Flag = SET;
     }
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    HAL_UART_Receive(&huart1, Rx_data, 10, 10);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 }
 /* USER CODE END 4 */
 
