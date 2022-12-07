@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-extern unsigned char mouse_model[];
-extern unsigned int mouse_model_len;
+extern unsigned char model_tflite[];
+extern unsigned int model_tflite_len;
 
 #endif //L475TFLITE_MODEL_DATA_H

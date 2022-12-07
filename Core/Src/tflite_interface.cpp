@@ -64,8 +64,14 @@ void initTflite() {
     float x = position * kXrange;
     int8_t x_quantized = x / input->params.scale + input->params.zero_point;
 
-    input->data.int8[0] = x_quantized;
-    printf("Input: %d\n\r", x_quantized);
+    input->data.int8[0] = 9;
+
+    printf("Position: %f\n\r", position);
+    printf("xRange: %f\n\r", kXrange);
+    printf("Scale: %f\n\r", input->params.scale);
+    printf("Zero point: %f\n\r", input->params.zero_point);
+    printf("Input float: %f\n\r", x);
+    printf("Input quantized: %d\n\r", x_quantized);
 
     /*for (size_t i = 0; i < 144; ++i) {
         float d;
@@ -78,14 +84,6 @@ void initTflite() {
         // input->data.int8[i] = d;
     }*/
 
-    /*******************/
-    printf("TfLiteTensor type: %d\r\n", input->type);
-    printf("TfLiteTensor data: %d\r\n", input->data);
-    printf("TfLiteTensor dims: %d\r\n", input->dims);
-    printf("TfLiteTensor params: %d\r\n", input->params);
-    printf("TfLiteTensor quantization: %d\r\n\n\n", input->quantization);
-    /*******************/
-
     TfLiteStatus invoke_status = interpreter->Invoke();
     if (invoke_status != kTfLiteOk) {
         TF_LITE_REPORT_ERROR(error_reporter, "Invoke failed\n");
@@ -96,5 +94,5 @@ void initTflite() {
     int8_t y_quantized = output->data.int8[0];
     float y = (y_quantized - output->params.zero_point) * output->params.scale;
 
-    printf("Output as int8: %d\nOutput as float: %f\n\r", y_quantized, y);
+    printf("Output quantized: %d\nOutput float: %f\n\r", y_quantized, y);
 }
