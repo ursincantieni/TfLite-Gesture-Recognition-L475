@@ -72,9 +72,9 @@ void initTflite() {
             if (i < 96) {
                 d = 2;
             } else {
-                d = 1;
+                d = 10;
             }
-            input->data.int8[i] = 1;
+            input->data.int8[i] = 10;
         }
 
         TfLiteStatus invoke_status = interpreter->Invoke();
