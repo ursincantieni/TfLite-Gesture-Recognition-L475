@@ -10,6 +10,7 @@ extern "C" {
 #endif
 
 void initTflite();
+static void print_model_info();
 
 #ifdef __cplusplus
 }

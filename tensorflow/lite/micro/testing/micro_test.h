@@ -129,8 +129,6 @@ inline void InitializeTest() { InitializeTarget(); }
     if ((vx) != (vy)) {                                                  \
       MicroPrintf(#x " == " #y " failed at %s:%d (%d vs %d)", __FILE__,  \
                   __LINE__, static_cast<int>(vx), static_cast<int>(vy)); \
-      printf("%d == %d failed at %s:%d\r\n", vx, vy, __FILE__, __LINE__);                                                               \
-      micro_test::did_test_fail = true;                                  \
     }                                                                    \
   } while (false)
 
@@ -169,7 +167,6 @@ inline void InitializeTest() { InitializeTarget(); }
       MicroPrintf(#x " (%f) near " #y " (%f) failed at %s:%d",                \
                   static_cast<double>(vx), static_cast<double>(vy), __FILE__, \
                   __LINE__);                                                  \
-      printf("%d near %d faild at %s:%d", vx, vy, __FILE__, __LINE__);        \
       micro_test::did_test_fail = true;                                       \
     }                                                                         \
   } while (false)

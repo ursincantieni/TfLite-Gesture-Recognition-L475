@@ -53,14 +53,15 @@ include_directories(Core/Inc X-CUBE-MEMS1/Target USB_DEVICE/App USB_DEVICE/Targe
 
 add_definitions(
 	-DDEBUG
-       	-DUSE_HAL_DRIVER
-       	-DSTM32L475xx
+    -DUSE_HAL_DRIVER
+    -DSTM32L475xx
 	-DTF_LITE_DISABLE_X86_NEON
-        -DCMSIS_NN
-        -DTF_LITE_USE_CTIME
-        -DUSE_HAL_DRIVER
-        -DTF_LITE_MCU_DEBUG_LOG
-        -DNDEBUG
+    -DCMSIS_NN
+    -DTF_LITE_USE_CTIME
+    -DUSE_HAL_DRIVER
+    -DTF_LITE_MCU_DEBUG_LOG
+    -DNDEBUG
+    -DDO_LOG
 )
 
 file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "X-CUBE-MEMS1/*.*" "Drivers/*.*" "USB_DEVICE/*.*")
