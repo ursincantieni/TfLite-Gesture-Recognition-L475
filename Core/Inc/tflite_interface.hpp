@@ -10,10 +10,13 @@ extern "C" {
 #endif
 
 void initTflite();
-static void print_model_info();
+void addValues(float x, float y, float z);
+void runInference(float* output);
 
 #ifdef __cplusplus
 }
 #endif
+
+static void print_model_info();
 
 #endif //TFLITE_INTERFACE_HPP

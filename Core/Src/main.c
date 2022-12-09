@@ -57,7 +57,7 @@ uint32_t Button_Flag;
 volatile uint32_t dataRdyIntReceived;
 
 uint8_t Rx_data[10];
-
+float prediction [2];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,27 +110,29 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int i = 0;
-  while (i < 20) {
-      HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-      HAL_Delay(100);
-      ++i;
-  }
-
   printf("\n\r\n\rFinished Initialization!\n\r");
   initTflite();
-  while (1) {}
   //mouse_main();
 
   while (1)
   {
       if (dataRdyIntReceived != 0) {
           dataRdyIntReceived = 0;
+          HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
           LSM6DSL_Axes_t acc_axes;
           LSM6DSL_ACC_GetAxes(&MotionSensor, &acc_axes);
-          printf("% 5d, % 5d, % 5d\n", (int) acc_axes.x, (int) acc_axes.y, (int) acc_axes.z);
+          //printf("% 5d, % 5d, % 5d\n", (int) acc_axes.x, (int) acc_axes.y, (int) acc_axes.z);
 
-          mouse_move(&acc_axes, &myMouse);
+          addValues(acc_axes.x, acc_axes.y, acc_axes.z);
+          runInference(prediction);
+
+          myMouse.x = (int8_t) (prediction[0]);
+          myMouse.y = (int8_t) (prediction[1]);
+
+          printf("%f, % 5f\r\n", myMouse.x, myMouse.y);
+
+          mouse_move(&myMouse);
+          HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
       }
     /* USER CODE END WHILE */
 
