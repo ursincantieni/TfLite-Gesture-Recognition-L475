@@ -126,10 +126,10 @@ int main(void)
           addValues(acc_axes.x, acc_axes.y, acc_axes.z);
           runInference(prediction);
 
-          myMouse.x = (int8_t) (prediction[0]);
-          myMouse.y = (int8_t) (prediction[1]);
+          myMouse.x = (int8_t) ((prediction[0] - 5) * 5);
+          myMouse.y = (int8_t) ((prediction[1]) * 5);
 
-          printf("%f, % 5f\r\n", myMouse.x, myMouse.y);
+          printf("%d, %d\r\n", myMouse.x, myMouse.y);
 
           mouse_move(&myMouse);
           HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);

@@ -60,7 +60,7 @@ void runInference(float* prediction) {
     float x = output->data.f[0];
     float y = output->data.f[1];
 
-    if (x < -1. || x > 1.) {
+    if (x < -3. || x > 3.) {
         prediction[0] = x;
     } else {prediction[0] = 0;}
     if (y < -1. || y > 1.) {
