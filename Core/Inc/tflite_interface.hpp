@@ -12,6 +12,7 @@ extern "C" {
 void initTflite();
 void addValues(float x, float y, float z);
 void runInference(float* output);
+void runTest();
 
 #ifdef __cplusplus
 }
