@@ -39,26 +39,14 @@ std::deque<float> queueY (48, 0);
 std::deque<float> queueZ (48, 0);
 
 #include "samples.h"
-void runTest() {
-    float prediction [2] = {0,0};
-    for (int i = 0; i < 30; ++i) {
-        for (int j = 0; j < 48; ++j) {
-            input->data.f[j] = samples[j + i * 146];
-            input->data.f[j + 48] = samples[j + i * 146 + 48];
-            input->data.f[j + 96] = samples[j + i * 146 + 96];
-        }
-        runInference(prediction);
-        printf("%f, %f\r\n", prediction[0], prediction[1]);
-    }
-}
 
 void addValues(float x, float y, float z) {
     queueX.pop_front();
-    queueX.push_back(x / 25);
+    queueX.push_back(x / 32);
     queueY.pop_front();
-    queueY.push_back(y / 25);
+    queueY.push_back(y / 32);
     queueZ.pop_front();
-    queueZ.push_back((z - 1000) / 25);
+    queueZ.push_back(z / 32);
 
     for (size_t i = 0; i < 48; ++i) {
         input->data.f[i] = queueX.at(i);
@@ -71,11 +59,9 @@ void runInference(float* prediction) {
     TfLiteStatus invoke_status = interpreter->Invoke();
     TF_LITE_MICRO_EXPECT_EQ(kTfLiteOk, invoke_status);
 
-    float x = output->data.f[0];
-    float y = output->data.f[1];
+    float y = output->data.f[0];
 
-    prediction[0] = x;
-    prediction[1] = y;
+    *prediction = y;
     /*if (x < -3. || x > 3.) {
         prediction[0] = x;
     } else {prediction[0] = 0;}
@@ -116,7 +102,7 @@ void initTflite() {
 
     TF_LITE_MICRO_EXPECT_EQ(2, output->dims->size);
     TF_LITE_MICRO_EXPECT_EQ(1, output->dims->data[0]);
-    TF_LITE_MICRO_EXPECT_EQ(2, output->dims->data[1]);
+    TF_LITE_MICRO_EXPECT_EQ(1, output->dims->data[1]);
     TF_LITE_MICRO_EXPECT_EQ(kTfLiteFloat32, output->type);
 
     // print_model_info();

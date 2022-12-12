@@ -19,7 +19,8 @@ struct mouseHID_t {
 extern LSM6DSL_Object_t MotionSensor;
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
-void mouse_move(struct mouseHID_t* mouseHID);
+void mouse_send(struct mouseHID_t* mouseHID);
+void mouse_click(struct mouseHID_t* mouseHID);
 void mouse_zero(struct mouseHID_t* mouseHID);
 
 #endif //MOUSE_MAIN_H

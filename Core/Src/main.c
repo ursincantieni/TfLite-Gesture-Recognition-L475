@@ -58,7 +58,7 @@ uint32_t Button_Flag;
 volatile uint32_t dataRdyIntReceived;
 
 uint8_t Rx_data[10];
-float prediction[2];
+float prediction;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,39 +114,45 @@ int main(void) {
     /* USER CODE BEGIN WHILE */
     printf("\n\r\n\rFinished Initialization!\n\r");
     initTflite();
-    // runTest();
+    int32_t counter = 0;
+    int32_t speed = 1;
+
     // while(1) {}
     while (1) {
-        if (dataRdyIntReceived != 0 || Button_Flag == SET) {
+        if (dataRdyIntReceived != 0) {
             dataRdyIntReceived = 0;
-            HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
             LSM6DSL_Axes_t acc_axes;
             LSM6DSL_ACC_GetAxes(&MotionSensor, &acc_axes);
-            printf("%5d,%5d,%5d\r\n", (int)acc_axes.x, (int)acc_axes.y,
-                   (int)acc_axes.z);
+            //printf("%5d,%5d,%5d\r\n", (int)acc_axes.x, (int)acc_axes.y,
+             //      (int)acc_axes.z);
 
             addValues(acc_axes.x, acc_axes.y, acc_axes.z);
-            runInference(prediction);
+            runInference(&prediction);
 
-            float velX = prediction[0];
-            float velY = prediction[1];
+            if (counter < 500) {
+                ++counter;
+            }
+            //printf("Result: %f\r\n", prediction);
 
-            if (velX < -0.7 || velX > 0.7) {
-                myMouse.x = velX;
-            } else {
-                myMouse.x = 0;
+            if (prediction >= 0.75f && prediction <= 1.2f && counter && counter >= 100) {
+                mouse_click(&myMouse);
+                HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+                printf("CLICK\r\n");
+                counter = 0;
             }
 
-            if (velY < -0.7 || velY > 0.7) {
-                myMouse.y = velY;
-            } else {
-                myMouse.y = 0;
+            myMouse.x = - speed * acc_axes.y / 100;
+            myMouse.y = - speed * acc_axes.x / 100;
+
+            if (Button_Flag) {
+                Button_Flag = 0;
+                if (speed >= 3) {
+                    speed = 1;
+                } else {
+                    speed += 0.5;
+                }
             }
-
-            printf("%f, %f\r\n", prediction[0], prediction[1]);
-
-            mouse_move(&myMouse);
-            HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+            mouse_send(&myMouse);
         }
         /* USER CODE END WHILE */
 
