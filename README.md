@@ -2,7 +2,7 @@
 
 ## What?
 
-Firmware to recognize a physical shaking as well as tilting of the device. With this infomation, the board can be used as USB-HID mouse to control the cursor in terms of left-clicking and movement. The gesture recognition is implemented using a Tensorflow Lite model.
+Projects which aims to make the B-L475E-IOT01A usable as a USB-mouse, based ont the LSM6DSL accelerometer. Cursor movement works by tilting the device, clicking by shaking it, which is recognized by a Tensorflow Lite model.
 
 ### Content
 
